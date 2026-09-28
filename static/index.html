@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang=zh-cmn-Hans class=theme-default><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=static/logo.png><title>制品仓库 | 智能运维</title><style>#loading-mask {
+				position: fixed;
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				background: #fff;
+				user-select: none;
+				z-index: 9999;
+				overflow: hidden;
+			}
+			.loading-wrapper {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -100%);
+			}
+			.loading-dot {
+				animation: antRotate 1.2s infinite linear;
+				transform: rotate(45deg);
+				position: relative;
+				display: inline-block;
+				font-size: 64px;
+				width: 64px;
+				height: 64px;
+				box-sizing: border-box;
+			}
+			.loading-dot i {
+				width: 22px;
+				height: 22px;
+				position: absolute;
+				display: block;
+				background-color: #1890ff;
+				border-radius: 100%;
+				transform: scale(0.75);
+				transform-origin: 50% 50%;
+				opacity: 0.3;
+				animation: antSpinMove 1s infinite linear alternate;
+			}
+			.loading-dot i:nth-child(1) {
+				top: 0;
+				left: 0;
+			}
+			.loading-dot i:nth-child(2) {
+				top: 0;
+				right: 0;
+				-webkit-animation-delay: 0.4s;
+				animation-delay: 0.4s;
+			}
+			.loading-dot i:nth-child(3) {
+				right: 0;
+				bottom: 0;
+				-webkit-animation-delay: 0.8s;
+				animation-delay: 0.8s;
+			}
+			.loading-dot i:nth-child(4) {
+				bottom: 0;
+				left: 0;
+				-webkit-animation-delay: 1.2s;
+				animation-delay: 1.2s;
+			}
+			@keyframes antRotate {
+				to {
+					-webkit-transform: rotate(405deg);
+					transform: rotate(405deg);
+				}
+			}
+			@-webkit-keyframes antRotate {
+				to {
+					-webkit-transform: rotate(405deg);
+					transform: rotate(405deg);
+				}
+			}
+			@keyframes antSpinMove {
+				to {
+					opacity: 1;
+				}
+			}
+			@-webkit-keyframes antSpinMove {
+				to {
+					opacity: 1;
+				}
+			}</style><link href=static/css/chunk-00cf85da.0e433876.css rel=prefetch><link href=static/css/chunk-059a9d9c.99dd5439.css rel=prefetch><link href=static/css/chunk-0d1a7888.96f8bb3c.css rel=prefetch><link href=static/css/chunk-6731684a.f596d998.css rel=prefetch><link href=static/css/chunk-79e081c1.783d2624.css rel=prefetch><link href=static/css/chunk-9bf617b0.748c7aea.css rel=prefetch><link href=static/css/chunk-e0ff1c8a.bdfa718c.css rel=prefetch><link href=static/css/chunk-f11260a2.c34959e4.css rel=prefetch><link href=static/css/chunk-fe8bddbc.78419d44.css rel=prefetch><link href=static/css/error.fcded073.css rel=prefetch><link href=static/css/fail.b9ec6fa0.css rel=prefetch><link href=static/js/chunk-00cf85da.2dd47c7c.js rel=prefetch><link href=static/js/chunk-059a9d9c.e88e5138.js rel=prefetch><link href=static/js/chunk-0d1a7888.7e6ccf95.js rel=prefetch><link href=static/js/chunk-6731684a.bd115b6e.js rel=prefetch><link href=static/js/chunk-79e081c1.abf494b7.js rel=prefetch><link href=static/js/chunk-9bf617b0.e6b2ec21.js rel=prefetch><link href=static/js/chunk-e0ff1c8a.51d5cbcd.js rel=prefetch><link href=static/js/chunk-f11260a2.1af1bbcf.js rel=prefetch><link href=static/js/chunk-fe8bddbc.f1cd5b11.js rel=prefetch><link href=static/js/error.740aad65.js rel=prefetch><link href=static/js/fail.0af139e5.js rel=prefetch><link href=static/js/lang-zh-CN.c6d31162.js rel=prefetch><link href=static/js/npm.marked.c4777b2a.js rel=prefetch><link href=static/css/app.3ae78dfd.css rel=preload as=style><link href=static/css/npm.ant-design-vue.7c30ca91.css rel=preload as=style><link href=static/css/npm.mavon-editor.b7feffcc.css rel=preload as=style><link href=static/js/app.885baffe.js rel=preload as=script><link href=static/js/npm.ant-design-vue.6f27434d.js rel=preload as=script><link href=static/js/npm.ant-design.e2ccabee.js rel=preload as=script><link href=static/js/npm.antv.97c62085.js rel=preload as=script><link href=static/js/npm.core-js.b7bf2e64.js rel=preload as=script><link href=static/js/npm.echarts.a75ae0a4.js rel=preload as=script><link href=static/js/npm.lodash.cdc2f460.js rel=preload as=script><link href=static/js/npm.mavon-editor.e1d7c077.js rel=preload as=script><link href=static/js/npm.moment.c8a00e0f.js rel=preload as=script><link href=static/js/npm.v-charts.77df4303.js rel=preload as=script><link href=static/js/npm.vue-container-query.9104455a.js rel=preload as=script><link href=static/js/npm.vue-router.16171862.js rel=preload as=script><link href=static/js/npm.vue.41134095.js rel=preload as=script><link href=static/js/npm.zrender.9f8c180e.js rel=preload as=script><link href=static/js/runtime.2b274a7e.js rel=preload as=script><link href=static/js/vendors~app.fc32446a.js rel=preload as=script><link href=static/css/npm.ant-design-vue.7c30ca91.css rel=stylesheet><link href=static/css/npm.mavon-editor.b7feffcc.css rel=stylesheet><link href=static/css/app.3ae78dfd.css rel=stylesheet></head><body><noscript><strong>We're sorry but vue-antd-pro doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app><div id=loading-mask><div class=loading-wrapper><span class="loading-dot loading-dot-spin"><i></i><i></i><i></i><i></i></span></div></div></div><script>window.API_ROOT = "{{SITE_URL}}";
+			let script = document.createElement("script");
+			script.src = window.location.origin + "/" + window.API_ROOT.split("/")[1] + "/llmops/static/chat/opsany-chat-modal.umd.js?t=" + Date.now();
+			// 公共 header（<opsany-header> 自定义元素），dev/prod 均从 workbench 的静态目录加载（单点更新）
+			let headerScript = document.createElement("script");
+			if (window.API_ROOT && window.API_ROOT.indexOf("SITE_URL") > -1) {
+				// dev：API_ROOT 是 SITE_URL 占位符，硬编码测试服务器上部署的产物
+				headerScript.src = "https://192.168.0.111/t/workbench/static/header/opsany-header.umd.js?t=" + Date.now();
+			} else {
+				// prod：按当前平台前缀推导 workbench 静态目录
+				headerScript.src = window.location.origin + "/" + window.API_ROOT.split("/")[1] + "/workbench/static/header/opsany-header.umd.js?t=" + Date.now();
+			}
+			document.body.appendChild(headerScript);
+			document.body.appendChild(script);</script><script src=static/js/runtime.2b274a7e.js></script><script src=static/js/npm.ant-design-vue.6f27434d.js></script><script src=static/js/npm.antv.97c62085.js></script><script src=static/js/npm.vue.41134095.js></script><script src=static/js/npm.echarts.a75ae0a4.js></script><script src=static/js/npm.core-js.b7bf2e64.js></script><script src=static/js/npm.lodash.cdc2f460.js></script><script src=static/js/npm.zrender.9f8c180e.js></script><script src=static/js/npm.ant-design.e2ccabee.js></script><script src=static/js/npm.v-charts.77df4303.js></script><script src=static/js/npm.mavon-editor.e1d7c077.js></script><script src=static/js/npm.moment.c8a00e0f.js></script><script src=static/js/npm.vue-container-query.9104455a.js></script><script src=static/js/npm.vue-router.16171862.js></script><script src=static/js/vendors~app.fc32446a.js></script><script src=static/js/app.885baffe.js></script></body></html>
